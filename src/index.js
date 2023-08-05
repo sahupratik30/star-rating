@@ -50,21 +50,12 @@ function handleClick(e) {
 }
 
 function markStarsOnHover(userRating) {
-  if (userRating) {
     for (let i = 0; i < userRating; i++) {
       if (!stars[i].classList.contains("fa-solid")) {
         stars[i].classList.add("fa-solid");
         stars[i].classList.remove("fa-regular");
       }
     }
-  } else {
-    stars.forEach((star) => {
-      if (star.classList.contains("fa-solid")) {
-        star.classList.remove("fa-solid");
-        star.classList.add("fa-regular");
-      }
-    });
-  }
 }
 
 function handleReset(e) {
